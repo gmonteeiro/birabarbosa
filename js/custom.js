@@ -5,7 +5,26 @@
         // PRE loader
         $(window).load(function(){
           $('.preloader').fadeOut(1000); // set duration in brackets    
+          $(".pt").addClass('hide');
         });
+
+        $("#pt").click(function(){
+          $(".pt").removeClass('hide');
+          $(".en").addClass('hide');
+          $("#en").removeClass('active');
+          $("#pt").addClass('active');
+        })
+
+        $("#en").click(function(){
+          $(".en").removeClass('hide');
+          $(".pt").addClass('hide');
+          $("#pt").removeClass('active');
+          $("#en").addClass('active');
+        })
+
+        function gaevent(eventCategory, eventAction){
+          ga('send', 'event', 'eventCategory', 'eventCategory', '');
+        }
 
 
         //Navigation Section

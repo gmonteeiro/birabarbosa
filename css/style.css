@@ -74,6 +74,18 @@ h3 {
 h4 {
   color: #3d3d3f;
   font-size: 20px;
+  text-transform: uppercase;
+}
+
+.colored h1, 
+.colored h2,
+.colored h3,
+.colored h4{
+  color: #ffffff;
+}
+
+.colored p{
+  color: #fff;
 }
 
 p {
@@ -82,6 +94,8 @@ p {
     font-weight: 300;
     line-height: 25px;
     letter-spacing: 0.2px;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 strong, span {
@@ -154,11 +168,18 @@ a:hover, a:active, a:focus {
 }
 
 #about,
-#team, #work,
+#foryou, #forgroups, #work,
 #contact, footer {
   position: relative;
   padding-top: 80px;
   padding-bottom: 80px;
+}
+
+#contact{
+  padding-bottom:0px;
+}
+footer, #forgroups{
+  padding-top: 0px;
 }
 
 #skill, #counter,
@@ -166,7 +187,7 @@ a:hover, a:active, a:focus {
   background: #f9f9f9;
 }
 
-#about img, #team img {
+#about img, #foryou img {
   border-radius: 5px;
 }
 
@@ -179,8 +200,44 @@ a:hover, a:active, a:focus {
   text-align: center;
 }
 
+.colored{
+  background-color: #36aaa5;
+}
+
+.dark{
+  background-color: rgba(0,0,0,0.1)
+}
+.light{
+  background-color: rgba(255,255,255,0.1)
+}
 
 
+.icon-section img{
+  width: 100%;
+  opacity: 0.8;
+  display: block;
+  margin: 0 auto;
+}
+
+.icon-section .imge-container{
+  width: 100%;
+  opacity: 0.2;
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+.icon-section .text{
+  padding-top: 50px;
+}
+
+.forgroups .text{
+  margin-bottom:60px;
+}
+
+.forgroups .section-title h2{
+  color: #36aaa5;
+}
 /*---------------------------------------
     3 Pre loader section              
 -----------------------------------------*/
@@ -315,6 +372,24 @@ a:hover, a:active, a:focus {
   border-color: transparent;
 }
 
+.lang{
+    position: absolute;
+    right: 20px;
+    top: 0px;
+    color: #eee;
+}
+.lang span{
+  padding: 3px 5px;
+  cursor: pointer;
+}
+.lang span.active{
+  color: #67ccc7;
+}
+
+.hide{
+  display: none;
+}
+
 @media(min-width:768px) {
     .custom-navbar {
       border-bottom: 0;
@@ -322,9 +397,11 @@ a:hover, a:active, a:focus {
     }
     .custom-navbar.top-nav-collapse {
       background: #ffffff;
-      box-shadow:0 40px 100px rgba(0,0,0,.2);
+      box-shadow: 0 1px 5px rgba(0,0,0,.2);
       padding: 10px 0;
     }
+
+
 
 }
 
@@ -369,8 +446,8 @@ a:hover, a:active, a:focus {
 }
 
 #about .about-thumb {
-  padding: 42px 32px;
-  margin-top: 8px;
+  padding: 0px 32px 62px 32px;
+  margin-top: -11px;
 }
 
 #about .about-thumb strong {
@@ -429,19 +506,31 @@ a:hover, a:active, a:focus {
 
 
 /*---------------------------------------
-    8 Team section              
+    8 FOR YOU              
 -----------------------------------------*/
 
-#team .team-thumb h2 {
+#foryou .team-thumb h2 {
   color: #3d3d3f;
   font-size: 25px;
   margin-top: 22px;
   margin-bottom: 0px;
 }
 
-#team .team-thumb strong {
+#foryou .team-thumb strong {
   letter-spacing: 0.5px;
 }
+
+#foryou .about-thumb-wrap h4:after {
+  content: "";
+  position: absolute;
+  background: #67ccc7;
+  width: 20%;
+  height: 2px;
+  top: 15px;
+  right: 0;
+  display: inline-block;
+}
+
 
 
 
@@ -632,7 +721,7 @@ footer .dash-line {
 
   .custom-navbar {
     background-color: #ffffff;
-    box-shadow:0 40px 100px rgba(0,0,0,.2);
+    box-shadow: 0 1px 5px rgba(0,0,0,.2);
     padding-top: 0px;
   }
 
@@ -642,7 +731,7 @@ footer .dash-line {
   }
 
   .about-thumb-wrap .col-md-4,
-  #team .team-thumb, footer .col-md-4 {
+  #foryou .team-thumb, footer .col-md-4 {
     margin-bottom: 35px;
   }
 
@@ -664,7 +753,7 @@ footer .dash-line {
     letter-spacing: 4px;
   }
 
-  #team .team-thumb h2 {
+  #foryou .team-thumb h2 {
     margin-top: 0px;
   }
 
@@ -675,6 +764,10 @@ footer .dash-line {
 
   .about-thumb .social-icon {
     margin-top: 25px;
+  }
+
+  .lang{
+    right: 45%;
   }
 
 }
